@@ -16,11 +16,12 @@ inquirer
       message: "Please write a brief description of your project!",
       name: "description",
     },
-    {
-      type: "input",
-      message: "Please list the table of contents!",
-      name: "tableOfContents",
-    },
+    // {
+    //   type: "rawList",
+    //   index: 1,
+    //   message: "Please list the table of contents!",
+    //   name: "tableOfContents",
+    // },
     {
       type: "input",
       message: "Please describe the installation process!",
@@ -82,8 +83,12 @@ inquirer
 ${response.description}
 
 ## TABLE OF CONTENTS
-
-${response.tableOfContents}
+[1. Description](#description)
+[2. Installaion](#installation)
+[3. Usage](#usage)
+[4. License](#license)
+[5. Tests](#tests)
+[6. Contact/Questions](#contact/questions)
 
 ## INSTALLATION
 
