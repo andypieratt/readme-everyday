@@ -6,12 +6,17 @@ This application uses command-line prompts that navigate through a series of que
 
 ## Table of Contents:
 
+1. [Demo Video](#demovideo)
 1. [Installation](#installation)
 1. [Usage](#usage)
 1. [License](#license)
 1. [Contributors](#contributors)
 1. [Tests](#tests)
 1. [Contact/Questions](#contactquestions)
+
+## Demo Video:
+
+[readme-everyday-demo-video](https://drive.google.com/file/d/1GtIvfzuG96sIQjx6fNl6DDLuSqqBvq02/view)
 
 ## Installation:
 
@@ -37,5 +42,5 @@ None Currently
 
 If you have any questions or want to connect, please use one (or both) of the links below!
 
-[Email:](pieratt.aw@gmail.com)
-[Github:](https://github.com/andypieratt)
+- Email: pieratt.aw@gmail.com
+- GitHub: https://github.com/andypieratt

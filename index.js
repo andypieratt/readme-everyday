@@ -107,8 +107,11 @@ ${response.tests}
 
 ## Contact/Questions:
 
-${response.github}
-${response.email}`,
+If you have any questions or want to connect, please use one (or both) of the links below!
+
+- GitHub: ${response.github}
+
+- Email: ${response.email}`,
       (err) => {
         if (err) {
           console.error(err);
