@@ -2,8 +2,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-// TODO: Create an array of questions for user input
-// const questions = [];
 inquirer
   .prompt([
     {
@@ -16,12 +14,6 @@ inquirer
       message: "Please write a brief description of your project!",
       name: "description",
     },
-    // {
-    //   type: "rawList",
-    //   index: 1,
-    //   message: "Please list the table of contents!",
-    //   name: "tableOfContents",
-    // },
     {
       type: "input",
       message: "Please describe the installation process!",
@@ -33,7 +25,7 @@ inquirer
       name: "usage",
     },
     {
-      type: "checkbox",
+      type: "list",
       message: "Please select a license from below:",
       choices: [
         "Apache License 2.0",
@@ -77,18 +69,19 @@ inquirer
     fs.writeFile(
       "./output/README.md",
       `# ${response.title}
-
+![License Badge](https://img.shields.io/badge/license-${encodeURIComponent(
+        response.license
+      )}-yellow)
 ## DESCRIPTION
 
 ${response.description}
 
 ## TABLE OF CONTENTS
-[1. Description](#description)
-[2. Installaion](#installation)
-[3. Usage](#usage)
-[4. License](#license)
-[5. Tests](#tests)
-[6. Contact/Questions](#contact/questions)
+1. [Installaion](#installation)
+1. [Usage](#usage)
+1. [License](#license)
+1. [Tests](#tests)
+1. [Contact/Questions](#contact/questions)
 
 ## INSTALLATION
 
@@ -115,20 +108,13 @@ ${response.tests}
 ${response.github}
 ${response.email}`,
       (err) => {
-        err
-          ? console.log(err)
-          : console.log(
-              "Responses have been added to the README.md file in the OUTPUT Folder!"
-            );
+        if (err) {
+          console.error(err);
+        } else {
+          console.log(
+            "Your responses have been added to the README file in the 'OUTPUT' Folder"
+          );
+        }
       }
     );
   });
-
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-// function init() {}
-
-// Function call to initialize app
-// init();
