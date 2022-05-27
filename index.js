@@ -1,7 +1,8 @@
-// TODO: Include packages needed for this application
+//Variables for "Require"
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+//Command-Line Prompts for Users
 inquirer
   .prompt([
     {
@@ -65,6 +66,7 @@ inquirer
       name: "email",
     },
   ])
+  //Writing the User Responses to the README.md File
   .then((response) => {
     fs.writeFile(
       "./output/README.md",
@@ -72,38 +74,38 @@ inquirer
 ![License Badge](https://img.shields.io/badge/license-${encodeURIComponent(
         response.license
       )}-yellow)
-## DESCRIPTION
+## Description:
 
 ${response.description}
 
-## TABLE OF CONTENTS
+## Table of Contents:
 1. [Installaion](#installation)
 1. [Usage](#usage)
 1. [License](#license)
 1. [Tests](#tests)
 1. [Contact/Questions](#contact/questions)
 
-## INSTALLATION
+## Installation:
 
 ${response.installation}
 
-## USAGE
+## Usage:
 
 ${response.usage}
 
-## LICENSE
+## License:
 
 ${response.license}
 
-## CONTRIBUTORS
+## Contributors:
 
 ${response.contributors}
 
-## TESTS
+## Tests:
 
 ${response.tests}
 
-## CONTACT/QUESTIONS
+## Contact/Questions:
 
 ${response.github}
 ${response.email}`,
